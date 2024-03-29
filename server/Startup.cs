@@ -1,3 +1,4 @@
+using greglist_dotnet.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +34,9 @@ public class Startup
 
     services.AddScoped<AccountsRepository>();
     services.AddScoped<AccountService>();
+
+    services.AddScoped<HouseService>();
+    services.AddScoped<HouseRepository>();
   }
 
   private void ConfigureCors(IServiceCollection services)
